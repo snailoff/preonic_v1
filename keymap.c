@@ -59,20 +59,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Vol+ | Pause|  7   |  8   |  9   |      |      | Home |  Up  | PgUp |      | Del  |
+ * | Vol+ |      |  7   |  8   |  9   |      |      | Home |  Up  | PgUp |      | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Vol- | Lock |  4   |  5   |  6   |      |      | Left | Down | Right|      |      |
+ * | Vol- |      |  4   |  5   |  6   |      |      | Left | Down | Right|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Mute | Prt  |  1   |  2   |  3   |      |      |  End |      | PgDn |      |      |
+ * | Mute |      |  1   |  2   |  3   |      |      |  End |      | PgDn |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |------|      |      |------|------|------|  Ins |------|------|      |      |------|
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-  KC_VOLU, KC_PAUS, KC_KP_7, KC_KP_8, KC_KP_9, XXXXXXX, XXXXXXX, KC_HOME, KC_UP,   KC_PGUP, XXXXXXX, KC_DEL,
-  KC_VOLD, KC_NLCK, KC_KP_4, KC_KP_5, KC_KP_6, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
-  KC_MUTE, KC_PSCR, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_0, XXXXXXX, KC_END,  XXXXXXX, KC_PGDN, XXXXXXX, XXXXXXX,
+  KC_VOLU, XXXXXXX, KC_KP_7, KC_KP_8, KC_KP_9, XXXXXXX, XXXXXXX, KC_HOME, KC_UP,   KC_PGUP, XXXXXXX, KC_DEL,
+  KC_VOLD, XXXXXXX, KC_KP_4, KC_KP_5, KC_KP_6, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
+  KC_MUTE, XXXXXXX, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_0, XXXXXXX, KC_END,  XXXXXXX, KC_PGDN, XXXXXXX, XXXXXXX,
   _______, XXXXXXX, XXXXXXX, _______, _______, _______, KC_INS,  _______, _______, XXXXXXX, XXXXXXX, _______ 
 ),
 
@@ -80,20 +80,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |  &   |  *   |  |   |      |      |   [  |  +   |  ]   |      |      |
+ * | Pause|      |      |  &   |  *   |  |   |      |      |   [  |  +   |  ]   |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |  $   |  %   |  ^   |  \   |      |   (  |  -   |  )   |      |      |
+ * | SLock| NLock|  $   |  %   |  ^   |  \   |      |   (  |  -   |  )   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |  !   |  @   |  #   |  _   |      |   {  |  =   |  }   |      |      |
+ * | Prsc |      |  !   |  @   |  #   |  _   |      |   {  |  =   |  }   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |------|      |      |------|------|------|      |------|------|      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-  XXXXXXX, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, XXXXXXX, XXXXXXX, KC_LBRC, KC_PPLS, KC_RBRC, XXXXXXX, XXXXXXX, 
-  XXXXXXX, XXXXXXX, KC_DLR,  KC_PERC, KC_CIRC, KC_BSLS, XXXXXXX, KC_LPRN, KC_PMNS, KC_RPRN, XXXXXXX, XXXXXXX, 
-  XXXXXXX, XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_UNDS, XXXXXXX, KC_LCBR, KC_EQL,  KC_RCBR, XXXXXXX, XXXXXXX, 
+  KC_PAUS, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, XXXXXXX, XXXXXXX, KC_LBRC, KC_PPLS, KC_RBRC, XXXXXXX, XXXXXXX, 
+  KC_SLCK, KC_NLCK, KC_DLR,  KC_PERC, KC_CIRC, KC_BSLS, XXXXXXX, KC_LPRN, KC_PMNS, KC_RPRN, XXXXXXX, XXXXXXX, 
+  KC_PSCR, XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_UNDS, XXXXXXX, KC_LCBR, KC_EQL,  KC_RCBR, XXXXXXX, XXXXXXX, 
   _______, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX
 ),
 
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | Reset| Debug|      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |      |             |      |      |      |      |      |
+ * |      |      |      |      |      |             |      |      |  BL  |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |CGswap|CGnorm|             |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -113,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
   XXXXXXX, RESET,   DEBUG,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BACKLIT, XXXXXXX, XXXXXXX, 
   XXXXXXX, XXXXXXX, XXXXXXX, CG_SWAP, CG_NORM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 )
