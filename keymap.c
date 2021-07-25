@@ -59,20 +59,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Vol+ |      |  7   |  8   |  9   |      |      | Home |  Up  | PgUp |      | Del  |
+ * | Vol+ |      |  7   |  8   |  9   |      |      | Home |  End |      |      | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Vol- |      |  4   |  5   |  6   |      |      | Left | Down | Right|      |      |
+ * | Vol- |      |  4   |  5   |  6   |      | Left | Down |  Up  | Right|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Mute |      |  1   |  2   |  3   |      |      |  End |      | PgDn |      |      |
+ * | Mute |      |  1   |  2   |  3   |      |      | PgUp | PgDn |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |------|      |      |------|------|------|  Ins |------|------|      |      |------|
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-  KC_VOLU, XXXXXXX, KC_KP_7, KC_KP_8, KC_KP_9, XXXXXXX, XXXXXXX, KC_HOME, KC_UP,   KC_PGUP, XXXXXXX, KC_DEL,
-  KC_VOLD, XXXXXXX, KC_KP_4, KC_KP_5, KC_KP_6, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
-  KC_MUTE, XXXXXXX, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_0, XXXXXXX, KC_END,  XXXXXXX, KC_PGDN, XXXXXXX, XXXXXXX,
+  KC_VOLU, XXXXXXX, KC_KP_7, KC_KP_8, KC_KP_9, XXXXXXX, XXXXXXX, KC_HOME, KC_END,  XXXXXXX, XXXXXXX, KC_DEL,
+  KC_VOLD, XXXXXXX, KC_KP_4, KC_KP_5, KC_KP_6, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX,
+  KC_MUTE, XXXXXXX, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_0, XXXXXXX, KC_PGUP, KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX,
   _______, XXXXXXX, XXXXXXX, _______, _______, _______, KC_INS,  _______, _______, XXXXXXX, XXXXXXX, _______ 
 ),
 
