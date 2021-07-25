@@ -80,21 +80,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Pause|      |      |  &   |  *   |  |   |      |      |   [  |  +   |  ]   |      |
+ * | Pause|      |  &   |  *   |  |   |      |      |   [  |  +   |  ]   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | SLock| NLock|  $   |  %   |  ^   |  \   |      |   (  |  -   |  )   |      |      |
+ * | SLock|      |  $   |  %   |  ^   |  \   |      |   (  |  -   |  )   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Prsc |      |  !   |  @   |  #   |  _   |      |   {  |  =   |  }   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |------|      |      |------|------|------|      |------|------|      |      |      |
+ * |------|      |      |------|------|------|      |------|------|      |      |------|
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
   KC_PAUS, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, XXXXXXX, XXXXXXX, KC_LBRC, KC_PPLS, KC_RBRC, XXXXXXX, XXXXXXX, 
-  KC_SLCK, KC_NLCK, KC_DLR,  KC_PERC, KC_CIRC, KC_BSLS, XXXXXXX, KC_LPRN, KC_PMNS, KC_RPRN, XXXXXXX, XXXXXXX, 
+  KC_SLCK, XXXXXXX, KC_DLR,  KC_PERC, KC_CIRC, KC_BSLS, XXXXXXX, KC_LPRN, KC_PMNS, KC_RPRN, XXXXXXX, XXXXXXX, 
   KC_PSCR, XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_UNDS, XXXXXXX, KC_LCBR, KC_EQL,  KC_RCBR, XXXXXXX, XXXXXXX, 
-  _______, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX
+  _______, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, _______ 
 ),
 
 /* Adjust (Lower + Raise)
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |  BL  |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |CGswap|CGnorm|             |      |      |      |      |      |
+ * |      |      |      |CGswap|CGnorm|      | NLock|      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
   XXXXXXX, RESET,   DEBUG,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BACKLIT, XXXXXXX, XXXXXXX, 
-  XXXXXXX, XXXXXXX, XXXXXXX, CG_SWAP, CG_NORM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+  XXXXXXX, XXXXXXX, XXXXXXX, CG_SWAP, CG_NORM, XXXXXXX, KC_NLCK, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 )
 
