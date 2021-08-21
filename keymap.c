@@ -42,61 +42,60 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |      |
+ * |  `   |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Func |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | GUI  |      |   `  | Lower| Ctrl | LAlt |  SPC | Shift| Raise|   '  |      | RAlt |
+ * | GUI  |      |  Alt | Lower| Ctrl |   '  | SPC  | Shift| Raise|   -  |      |  Alt |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_preonic_grid(
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
   KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,
-  XXXXXXX, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
-  KC_LGUI, XXXXXXX, KC_GRV,  LOWER,   KC_LCTL, KC_LALT, KC_SPC,  KC_RSFT, RAISE,   KC_QUOT, XXXXXXX, KC_RALT
+  KC_GRV,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
+  KC_LGUI, XXXXXXX, KC_LALT, LOWER,   KC_LCTL, KC_QUOT, KC_SPC,  KC_RSFT, RAISE,   KC_MINS, XXXXXXX, KC_RALT
 ),
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Vol+ |      |  7   |  8   |  9   |      |      | Home |  End |      |      | Del  |
+ * | Vol+ |      |  [   |  Up  |  ]   |      |      |  7   |  8   |  9   |  Ins | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Vol- |      |  4   |  5   |  6   |      | Left | Down |  Up  | Right|      |      |
+ * | Vol- | Home | Left | Down | Right| End  |      |  4   |  5   |  6   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Mute |      |  1   |  2   |  3   |  0   |      | PgUp | PgDn |      |      |      |
+ * | Mute |      |  (   |  =   |  )   |  +   |      |  1   |  2   |  3   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |------|      |      |------|------|------|  Ins |------|------|      |      |------|
+ * |------|      |------|------|------|      |      |------|------|  0   |      |------|
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-  KC_VOLU, XXXXXXX, KC_KP_7, KC_KP_8, KC_KP_9, XXXXXXX, XXXXXXX, KC_HOME, KC_END,  XXXXXXX, XXXXXXX, KC_DEL,
-  KC_VOLD, XXXXXXX, KC_KP_4, KC_KP_5, KC_KP_6, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX,
-  KC_MUTE, XXXXXXX, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_0, XXXXXXX, KC_PGUP, KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX,
-  _______, XXXXXXX, XXXXXXX, _______, _______, _______, KC_INS,  _______, _______, XXXXXXX, XXXXXXX, _______ 
+  KC_VOLU, XXXXXXX, KC_LBRC, KC_UP,   KC_RBRC, XXXXXXX, XXXXXXX, KC_7,    KC_8,    KC_9,    KC_INS,  KC_DEL,
+  KC_VOLD, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END,  XXXXXXX, KC_4,    KC_5,    KC_6,    XXXXXXX, XXXXXXX,
+  KC_MUTE, XXXXXXX, KC_LPRN, KC_EQL,  KC_RPRN, KC_PLUS, XXXXXXX, KC_1,    KC_2,    KC_3,    XXXXXXX, XXXXXXX,
+  _______, XXXXXXX, _______, _______, _______, XXXXXXX, XXXXXXX, _______, _______, KC_0,    XXXXXXX, _______
 ),
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Pause|      |  &   |  *   |  |   |      |      |   [  |  +   |  ]   |      |      |
+ * | Pause|      |      |      |      |      |      |  &   |  *   |  |   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | SLock|      |  $   |  %   |  ^   |  \   |      |   (  |  -   |  )   |      |      |
+ * | SLock|      |      |      |      |      |      |  $   |  %   |  ^   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Prsc |      |  !   |  @   |  #   |  _   |      |   {  |  =   |  }   |      |      |
+ * | Prsc |      |      |      |      |      |  \   |  !   |  @   |  #   |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |------|      |      |------|------|------|      |------|------|      |      |------|
+ * |------|      |------|------|------|      |      |------|------|      |      |------|
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_preonic_grid(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-  KC_PAUS, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, XXXXXXX, XXXXXXX, KC_LBRC, KC_PPLS, KC_RBRC, XXXXXXX, XXXXXXX, 
-  KC_SLCK, XXXXXXX, KC_DLR,  KC_PERC, KC_CIRC, KC_BSLS, XXXXXXX, KC_LPRN, KC_PMNS, KC_RPRN, XXXXXXX, XXXXXXX, 
-  KC_PSCR, XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_UNDS, XXXXXXX, KC_LCBR, KC_EQL,  KC_RCBR, XXXXXXX, XXXXXXX, 
-  _______, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, _______ 
+  KC_PAUS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, XXXXXXX, XXXXXXX,
+  KC_SLCK, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DLR,  KC_PERC, KC_CIRC, XXXXXXX, XXXXXXX,
+  KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS, KC_EXLM, KC_AT,   KC_HASH, XXXXXXX, XXXXXXX,
+  _______, XXXXXXX, _______, _______, _______, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, _______
 ),
-
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |      |      |      |      |      |      |
